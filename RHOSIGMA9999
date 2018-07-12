@@ -1,0 +1,41 @@
+ <script type="text/javascript">
+      $(document).ready(function() {
+        $.extend(Anywhere.urls, {
+          save: "/user/alanfunt/files/home/alanfunt/mysite/flask_app.py",
+          check_hash: "/user/alanfunt/files/home/alanfunt/mysite/flask_app.py",
+          run: "/user/alanfunt/files/home/alanfunt/mysite/flask_app.py" + "?run",
+          update_editor_mode_preference: "/user/alanfunt/account/update_editor_mode_preference",
+        });
+        var filename = "/home/alanfunt/mysite/flask_app.py";
+        var hash = "e55bff2fe5c0da3b3dba76eb55a43ab8";
+        var interpreter = "python3.6";
+
+        
+            Anywhere.Editor.InitialiseAce(ace, Anywhere.urls, filename, hash, interpreter);
+            $("#id_keybinding_mode_select").val("normal");
+            $("#id_keybinding_mode_select").trigger("change");
+        
+        var consoleVisible = true;
+        Anywhere.Editor.splitPanes(consoleVisible);
+
+        Anywhere.WebAppControl.initialize();
+        Anywhere2.initializeFileSharingOptions(
+          $('#id_file_sharing_options')[0],
+          {
+            url: "/api/v0/user/alanfunt/files/sharing/",
+            csrfToken: "5hWCfO4B0m9oPCusDG5hYh6KU5luN9d9",
+            path: "/home/alanfunt/mysite/flask_app.py"
+          }
+        );
+
+      });
+    </script>
+    WWW.HTTPS/XXXX333322222.001-P180
+    <div class="pull-left">
+      <span id="id_breadcrumbs_div"><a class="breadcrumbs_link breadcrumb_entry" 
+      href="/user/alanfunt/files/">/</a><a class="breadcrumbs_link breadcrumb_entry"
+      href="/user/alanfunt/files/home">home</a><span class="breadcrumb_entry">/</span>
+      <a class="breadcrumbs_link breadcrumb_entry" href="/user/alanfunt/files/home/alanfunt">
+      alanfunt</a><span class="breadcrumb_entry">/</span><a class="breadcrumbs_link breadcrumb_entry"
+      href="/user/alanfunt/files/home/alanfunt/mysite">mysite</a><span class="breadcrumb_entry">/
+      </span><wbr><span class="breadcrumb_entry breadcrumb_terminal">flask_app.py</span></span>
